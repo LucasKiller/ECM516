@@ -1,7 +1,7 @@
 const axios = require('axios')
 
 const cidade = 'Itu'
-const appid = 'a36a7af7a5c21d755347ff0a39b70dd1'
+const appid = '<API-KEY>'
 const cnt = '2'
 const units = 'metric'
 const lang = 'pt_br'
