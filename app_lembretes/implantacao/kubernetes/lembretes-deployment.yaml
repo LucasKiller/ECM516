@@ -24,8 +24,7 @@ spec:
     spec:
       containers:
         - name: lembretes
-          image: asbonato/lembretes
-          imagePullPolicy: Never
+          image: lucasmilani/lembretes
           resources:
             limits:
               memory: 256Mi
