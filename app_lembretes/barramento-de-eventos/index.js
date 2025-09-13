@@ -10,7 +10,7 @@ app.post("/eventos", (req, res) => {
   const evento = req.body;
   eventos.push(evento);
   //envia o evento para o microsserviço de lembretes
-  axios.post("http://10.2.128.23:4000/eventos", evento).catch((err) => {});
+  axios.post("http://lembretes-clusterip-service:4000/eventos", evento).catch((err) => {});
   //envia o evento para o microsservico de observacoes
   axios.post("http://10.2.128.23:5000/eventos", evento).catch((err) => {});
   //envia o evento para o microsservico de consulta
@@ -25,5 +25,6 @@ app.get("/eventos", (req, res) => {
 });
 
 app.listen(10000, () => {
+  console.log("Chamando barramento-de-eventos-service")
   console.log("Barramento de eventos. Porta 10000.");
 });

@@ -15,7 +15,7 @@ app.post("/lembretes", async (req, res) => {
   const { texto } = req.body;
   lembretes[contador] = { contador, texto };
   //envia um evento para o barramento
-  await axios.post("http://10.2.128.23:10000/eventos", {
+  await axios.post("http://barramento-de-eventos-service:10000/eventos", {
     tipo: "LembreteCriado",
     dados: {
       contador,
@@ -30,7 +30,6 @@ app.post("/eventos", (req, res) => {
 });
 
 app.listen(4000, () => {
-  console.log("Nova versão")
-  console.log("Agora usando o Docker Hub")
+  console.log("Chamando barramento-de-eventos-service");
   console.log("Lembretes. Porta 4000.");
 });
