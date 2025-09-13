@@ -11,6 +11,6 @@ Repositório de aprendizado e armazenamento das aulas ECM516
 
 3. Testar:
     - Inserir `kubectl get services` e obtenha a porta daquele serviço
-    - Com Postaman fazer um get/post com a porta e serviço desejado Ex.: http://localhost:30695/lembretes
+    - Com Postman fazer um get/post com a porta e serviço desejado Ex.: http://localhost:30695/lembretes
 
 Obs: Se caso mudar algum conteúdo dentro do index.js, você deve digitar `kubectl rollout restart deployment {nome do evento}-deployment` e rodar o build daquele serviço de novo
